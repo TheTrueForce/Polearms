@@ -6,7 +6,7 @@ This is currently for MC1.7.10, and I want to work on getting it operational in 
 The 1.7.10 version is compiled against Forge 1614.
 The 1.10.2 version is not yet started.
 
-TODO: put mod up on Curse when it's working and post link.
+You can download the mod on Curse here: https://minecraft.curseforge.com/projects/polearms
 
 I coded this up in about 2014(I don't remember exactly when), basing it off of BedrockMiner's very good tutorials(now discontinued, but still available here:https://bedrockminer.jimdo.com/).
 I didn't release it then, as I was not at all confident that it would be any good. I thought it was a decent idea, and I didn't know of any other mod that did this.
