@@ -1,0 +1,19 @@
+[
+{
+	"modid": "Polearms",
+	"name": "Polearms",
+	"description": "This mod adds various weapons that extend the player's reach",
+	"version": "${version}",
+	"mcversion": "${mcversion}",
+	"url": "",
+	"updateUrl": "",
+ 	"authorList": ["DerTrueForce"],
+	"credits": "",
+	"logoFile": "",
+	"screenshots": [],
+	"requiredMods": ["Forge"],
+	"dependencies": ["Forge"],
+	"useDependencyInfo": true
+}
+]
+	

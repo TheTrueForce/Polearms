@@ -2,9 +2,8 @@
 A mod for Minecraft that adds Spears; Basically, swords with longer reach.
 
 I will upload the code soon, but I want to get it working in IntelliJ first.
-TODO: get it working and upload it.
 This is currently for MC1.7.10, and I want to work on getting it operational in MC1.10.2. I'm not sure whether I'll put the 1.10.2 version in a new repo, or a directory in here...
-The 1.7.10 version is compiled against Forge 1614. TODO: add other dependencies, if any.
+The 1.7.10 version is compiled against Forge 1614.
 The 1.10.2 version is not yet started.
 
 TODO: put mod up on Curse when it's working and post link.
