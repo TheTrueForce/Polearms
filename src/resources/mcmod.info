@@ -9,7 +9,7 @@
 	"updateUrl": "",
  	"authorList": ["DerTrueForce"],
 	"credits": "",
-	"logoFile": "",
+	"logoFile": "assets/polearms/textures/logo.png",
 	"screenshots": [],
 	"requiredMods": ["Forge"],
 	"dependencies": ["Forge"],
