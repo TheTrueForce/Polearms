@@ -1,23 +1,24 @@
 package trueForce.polearms.proxy;
 
+import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.init.Items;
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.fml.common.FMLCommonHandler;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.network.NetworkRegistry;
+import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
+import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.oredict.ShapedOreRecipe;
 import trueForce.polearms.EventHandler;
 import trueForce.polearms.Polearms;
 import trueForce.polearms.item.ModItems;
 import trueForce.polearms.network.MessageExtendedReachAttack;
 
-import cpw.mods.fml.common.FMLCommonHandler;
-import cpw.mods.fml.common.event.FMLInitializationEvent;
-import cpw.mods.fml.common.event.FMLPostInitializationEvent;
-import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import cpw.mods.fml.common.network.NetworkRegistry;
-import cpw.mods.fml.common.network.simpleimpl.MessageContext;
-import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.relauncher.Side;
-import net.minecraft.entity.player.EntityPlayerMP;
-import net.minecraft.init.Items;
-import net.minecraft.item.ItemStack;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.oredict.ShapedOreRecipe;
+
 
 public class CommonProxy {
 	public void preInit(FMLPreInitializationEvent e) {
@@ -41,7 +42,7 @@ public class CommonProxy {
 	}
 
 
-	public void registerEventListeners() 
+	private void registerEventListeners()
 	{
 		// DEBUG
 		Polearms.logger.info("Registering event listeners");
@@ -54,44 +55,44 @@ public class CommonProxy {
 		FMLCommonHandler.instance().bus().register(new EventHandler());
 	}
 	
-	public void registerNetworkChannel() {
+	private void registerNetworkChannel() {
 		Polearms.network = NetworkRegistry.INSTANCE.newSimpleChannel(Polearms.NETWORK_CHANNEL_NAME);
 		int packetId = 0;
 		// register messages from client to server
 		Polearms.network.registerMessage(MessageExtendedReachAttack.Handler.class, MessageExtendedReachAttack.class, packetId++, Side.SERVER);
 	}
 	
-	public void registerCrafting() {
-		GameRegistry.addRecipe(new ShapedOreRecipe(ModItems.pole, "#", "#", '#', Items.stick));
+	private void registerCrafting() {
+		GameRegistry.addRecipe(new ShapedOreRecipe(ModItems.pole, "#", "#", '#', Items.STICK));
 		GameRegistry.addShapedRecipe(ModItems.woodSpear, 
 				"#",
 				"$",
 				"$",
-				'#', new ItemStack(Items.wooden_sword),
+				'#', new ItemStack(Items.WOODEN_SWORD),
 				'$', ModItems.pole);
 		GameRegistry.addShapedRecipe(ModItems.stoneSpear, 
 				"#",
 				"$",
 				"$",
-				'#', new ItemStack(Items.stone_sword),
+				'#', new ItemStack(Items.STONE_SWORD),
 				'$', ModItems.pole);
 		GameRegistry.addShapedRecipe(ModItems.ironSpear, 
 				"#",
 				"$",
 				"$",
-				'#', new ItemStack(Items.iron_sword),
+				'#', new ItemStack(Items.IRON_SWORD),
 				'$', ModItems.pole);
 		GameRegistry.addShapedRecipe(ModItems.goldSpear, 
 				"#",
 				"$",
 				"$",
-				'#', new ItemStack(Items.golden_sword),
+				'#', new ItemStack(Items.GOLDEN_SWORD),
 				'$', ModItems.pole);
 		GameRegistry.addShapedRecipe(ModItems.diamondSpear, 
 				"#",
 				"$",
 				"$",
-				'#', new ItemStack(Items.diamond_sword),
+				'#', new ItemStack(Items.DIAMOND_SWORD),
 				'$', ModItems.pole);
 	}
 

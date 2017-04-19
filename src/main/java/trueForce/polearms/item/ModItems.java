@@ -1,8 +1,8 @@
 package trueForce.polearms.item;
 
+import net.minecraftforge.fml.common.registry.GameRegistry;
 import trueForce.polearms.Polearms;
 
-import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
@@ -13,9 +13,9 @@ public class ModItems {
 	private static Item itemIronSpear = new Spear(ToolMaterial.IRON);
 	private static Item itemWoodSpear = new Spear(ToolMaterial.WOOD);
 	private static Item itemStoneSpear = new Spear(ToolMaterial.STONE);
-	private static Item itemDiamondSpear = new Spear(ToolMaterial.EMERALD);
+	private static Item itemDiamondSpear = new Spear(ToolMaterial.DIAMOND);
 	private static Item itemGoldSpear = new Spear(ToolMaterial.GOLD);
-	private static Item itemPole = new Item().setUnlocalizedName("pole").setTextureName(Polearms.DOMAIN + ":pole").setCreativeTab(CreativeTabs.tabMaterials);
+	private static Item itemPole = new Pole();
 	
 	public static ItemStack woodSpear;
 	public static ItemStack stoneSpear;
@@ -30,6 +30,8 @@ public class ModItems {
 		GameRegistry.registerItem(itemDiamondSpear, "diamondSpear");
 		GameRegistry.registerItem(itemGoldSpear, "goldSpear");
 		GameRegistry.registerItem(itemPole, "pole");
+
+		
 		
 		pole = new ItemStack(itemPole);
 		ironSpear = new ItemStack(itemIronSpear);

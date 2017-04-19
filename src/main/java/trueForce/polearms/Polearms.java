@@ -5,22 +5,23 @@ import org.apache.logging.log4j.Logger;
 
 import trueForce.polearms.proxy.CommonProxy;
 
-import cpw.mods.fml.common.Mod;
-import cpw.mods.fml.common.Mod.EventHandler;
-import cpw.mods.fml.common.Mod.Instance;
-import cpw.mods.fml.common.SidedProxy;
-import cpw.mods.fml.common.event.FMLInitializationEvent;
-import cpw.mods.fml.common.event.FMLPostInitializationEvent;
-import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import cpw.mods.fml.common.network.simpleimpl.SimpleNetworkWrapper;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.Mod.EventHandler;
+import net.minecraftforge.fml.common.Mod.Instance;
+import net.minecraftforge.fml.common.SidedProxy;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 
-@Mod(modid = Polearms.MODID, name = Polearms.MODNAME, version = Polearms.VERSION)
+@Mod(modid = Polearms.MODID, name = Polearms.MODNAME, version = Polearms.VERSION, acceptedMinecraftVersions = Polearms.MC_VERSION)
 public class Polearms {
 	
-	public static final String MODID = "Polearms";
+	public static final String MODID = "polearms";
 	public static final String DOMAIN = "polearms";
 	public static final String MODNAME = "Polearms";
-	public static final String VERSION = "1.3";
+	public static final String VERSION = "2.0";
+	public static final String MC_VERSION = "1.10.2";
 	public static final String NETWORK_CHANNEL_NAME = "polearms";
 
 	@Instance
@@ -47,5 +48,4 @@ public class Polearms {
 	public void postInit(FMLPostInitializationEvent e) {
 		proxy.postInit(e);
 	}
-	
 }

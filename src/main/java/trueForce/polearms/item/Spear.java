@@ -1,7 +1,5 @@
 package trueForce.polearms.item;
 
-import trueForce.polearms.Polearms;
-
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemSword;
 
@@ -9,40 +7,46 @@ public class Spear extends ItemSword implements IExtendedReach {
 	public Spear(ToolMaterial material) {
 		super(material);
 		switch (material) {
-		case EMERALD:
+		case DIAMOND:
 			setUnlocalizedName("diamondSpear");
-			setTextureName(Polearms.DOMAIN + ":" + "diamondSpear");
+            name = "diamondSpear";
 			break;
 		case GOLD:
 			setUnlocalizedName("goldSpear");
-			setTextureName(Polearms.DOMAIN + ":" + "goldSpear");
+			name = "goldSpear";
 			break;
 		case IRON:
 			setUnlocalizedName("ironSpear");
-			setTextureName(Polearms.DOMAIN + ":" + "ironSpear");
+            name = "ironSpear";
 			break;
 		case STONE:
 			setUnlocalizedName("stoneSpear");
-			setTextureName(Polearms.DOMAIN + ":" + "stoneSpear");
+            name = "stoneSpear";
 			break;
 		case WOOD:
 			setUnlocalizedName("woodSpear");
-			setTextureName(Polearms.DOMAIN + ":" + "woodSpear");
+            name = "woodSpear";
 			break;
 		}
-		setCreativeTab(CreativeTabs.tabCombat);
+		setCreativeTab(CreativeTabs.COMBAT);
 		
 	}
 	
 	public Spear(ToolMaterial material, String domain, String unlocalizedName) {
 		super(material);
 		setUnlocalizedName(unlocalizedName);
-		setTextureName(domain + ":" + unlocalizedName);
-		setCreativeTab(CreativeTabs.tabCombat);
+		name = unlocalizedName;
+		setCreativeTab(CreativeTabs.COMBAT);
 	}
+
+	private static String name;
+
+	public String getName() {
+	    return name;
+    }
 
 	@Override
 	public float getReach() {
-		return 7.0F;// Seven blocks of reach
+		return 7.0F;// Seven blocks of reach, up from the player's usual 5.
 	}
 }

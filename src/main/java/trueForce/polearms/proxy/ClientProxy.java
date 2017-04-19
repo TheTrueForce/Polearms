@@ -1,8 +1,9 @@
 package trueForce.polearms.proxy;
 
-import cpw.mods.fml.common.event.FMLInitializationEvent;
-import cpw.mods.fml.common.event.FMLPostInitializationEvent;
-import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import trueForce.polearms.client.render.items.ItemRenderRegister;
 
 public class ClientProxy extends CommonProxy {
 
@@ -14,6 +15,7 @@ public class ClientProxy extends CommonProxy {
 	@Override
 	public void init(FMLInitializationEvent e) {
 		super.init(e);
+        ItemRenderRegister.registerItemRenderer();
 	}
 
 	@Override
