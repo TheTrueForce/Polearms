@@ -7,7 +7,7 @@ The 1.10.2 version is not yet started.
 
 You can download the mod on Curse here: https://minecraft.curseforge.com/projects/polearms
 
-I coded this up in about 2014(I don't remember exactly when), basing it off of BedrockMiner's very good tutorials(now discontinued, but still available here:https://bedrockminer.jimdo.com/).
+I coded this up in about 2014(I don't remember exactly when), basing it off of BedrockMiner's very good tutorials(now discontinued, but still available here:https://bedrockminer.jimdo.com/). Jabelar's tutorials were the source of the core code of this mod(https://jabelarminecraft.blogspot.com.au/).
 I didn't release it then, as I was not at all confident that it would be any good. I thought it was a decent idea, and I didn't know of any other mod that did this.
 I also should say that I cannot guarantee that I will continue this project. I am a uni student, and that will eat a good deal of my time. By all means drop in bug reports, but don't expect a timely response.
 That's part of the motivation for putting it up here, and for the use of the Apache license. Derivatives are welcome, but I would prefer it if you kept the same license.
