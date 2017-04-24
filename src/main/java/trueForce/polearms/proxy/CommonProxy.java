@@ -2,8 +2,10 @@ package trueForce.polearms.proxy;
 
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.init.Items;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -21,8 +23,13 @@ import trueForce.polearms.network.MessageExtendedReachAttack;
 
 
 public class CommonProxy {
+    public void registerItems(RegistryEvent.Register<Item> event) {
+        ModItems.registerItems(event);
+    }
+
 	public void preInit(FMLPreInitializationEvent e) {
-		ModItems.registerItems();
+		//TODO: add a config to customize damage values.
+        ModItems.setupCreativeTabs();
 		
 	}
 	
@@ -52,7 +59,7 @@ public class CommonProxy {
 		//MinecraftForge.ORE_GEN_BUS.register(new WildAnimalsOreGenEventHandler());        
 
 		// some events, especially tick, are handled on FML bus
-		FMLCommonHandler.instance().bus().register(new EventHandler());
+		MinecraftForge.EVENT_BUS.register(new EventHandler());
 	}
 	
 	private void registerNetworkChannel() {

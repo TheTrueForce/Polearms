@@ -2,44 +2,45 @@ package trueForce.polearms.item;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemSword;
+import trueForce.polearms.Polearms;
 
 public class Spear extends ItemSword implements IExtendedReach {
 	public Spear(ToolMaterial material) {
 		super(material);
 		switch (material) {
 		case DIAMOND:
-			setUnlocalizedName("diamondSpear");
-            name = "diamondSpear";
+			setUnlocalizedName("diamondspear");
+            name = "diamondspear";
 			break;
 		case GOLD:
-			setUnlocalizedName("goldSpear");
-			name = "goldSpear";
+			setUnlocalizedName("goldspear");
+			name = "goldspear";
 			break;
 		case IRON:
-			setUnlocalizedName("ironSpear");
-            name = "ironSpear";
+			setUnlocalizedName("ironspear");
+            name = "ironspear";
 			break;
 		case STONE:
-			setUnlocalizedName("stoneSpear");
-            name = "stoneSpear";
+			setUnlocalizedName("stonespear");
+            name = "stonespear";
 			break;
 		case WOOD:
-			setUnlocalizedName("woodSpear");
-            name = "woodSpear";
+			setUnlocalizedName("woodspear");
+            name = "woodspear";
 			break;
 		}
 		setCreativeTab(CreativeTabs.COMBAT);
-		
+
 	}
 	
 	public Spear(ToolMaterial material, String domain, String unlocalizedName) {
 		super(material);
 		setUnlocalizedName(unlocalizedName);
+		setRegistryName(Polearms.MODID + ":" + unlocalizedName);
 		name = unlocalizedName;
-		setCreativeTab(CreativeTabs.COMBAT);
 	}
 
-	private static String name;
+	protected static String name;
 
 	public String getName() {
 	    return name;
