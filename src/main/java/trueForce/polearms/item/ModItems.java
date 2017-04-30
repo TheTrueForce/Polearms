@@ -1,9 +1,7 @@
 package trueForce.polearms.item;
 
 import net.minecraftforge.fml.common.registry.GameRegistry;
-import trueForce.polearms.Polearms;
 
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemStack;
@@ -31,7 +29,6 @@ public class ModItems {
 		GameRegistry.registerItem(itemGoldSpear, "goldSpear");
 		GameRegistry.registerItem(itemPole, "pole");
 
-		
 		
 		pole = new ItemStack(itemPole);
 		ironSpear = new ItemStack(itemIronSpear);

@@ -27,7 +27,7 @@ public class Polearms {
 	@Instance
 	public static Polearms instance = new Polearms();
 	
-	@SidedProxy(clientSide = "trueForce.polearms.proxy.ClientProxy", serverSide = "trueForce.polearms.proxy.ServerProxy")
+	@SidedProxy(clientSide = "trueForce.polearms.proxy.ClientProxy", serverSide = "trueForce.polearms.proxy.CommonProxy")
 	public static CommonProxy proxy;
 	
 	public static Logger logger = LogManager.getLogger(MODID);
