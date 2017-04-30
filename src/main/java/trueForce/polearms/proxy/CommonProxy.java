@@ -12,6 +12,7 @@ import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 import trueForce.polearms.EventHandler;
 import trueForce.polearms.Polearms;
@@ -23,7 +24,6 @@ import trueForce.polearms.network.MessageExtendedReachAttack;
 public class CommonProxy {
 	public void preInit(FMLPreInitializationEvent e) {
 		ModItems.registerItems();
-		
 	}
 	
 	public void init(FMLInitializationEvent e) {
@@ -47,12 +47,9 @@ public class CommonProxy {
 		// DEBUG
 		Polearms.logger.info("Registering event listeners");
 		MinecraftForge.EVENT_BUS.register(new EventHandler());
-		//MinecraftForge.TERRAIN_GEN_BUS.register(new WildAnimalsTerrainGenEventHandler());
-
-		//MinecraftForge.ORE_GEN_BUS.register(new WildAnimalsOreGenEventHandler());        
 
 		// some events, especially tick, are handled on FML bus
-		FMLCommonHandler.instance().bus().register(new EventHandler());
+		MinecraftForge.EVENT_BUS.register(new EventHandler());
 	}
 	
 	private void registerNetworkChannel() {
